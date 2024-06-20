@@ -38,7 +38,7 @@ public class Card {
 
     @Override
     public String toString() {
-        return "Card{" +
+        return "\n Card{" +
                 "cardValue=" + cardValue +
                 ", turtleColor=" + turtleColor +
                 '}';

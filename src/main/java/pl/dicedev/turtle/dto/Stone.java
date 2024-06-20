@@ -2,7 +2,7 @@ package pl.dicedev.turtle.dto;
 
 import java.util.Objects;
 
-public class Stone {
+public class Stone implements Comparable<Stone> {
 
     Turtle turtle1;
     Turtle turtle2;
@@ -58,6 +58,7 @@ public class Stone {
         return Objects.equals(turtle1, stone.turtle1) && Objects.equals(turtle2, stone.turtle2) && Objects.equals(turtle3, stone.turtle3) && Objects.equals(turtle4, stone.turtle4) && Objects.equals(turtle5, stone.turtle5);
     }
 
+
     @Override
     public int hashCode() {
         return Objects.hash(turtle1, turtle2, turtle3, turtle4, turtle5);
@@ -71,6 +72,11 @@ public class Stone {
                 ", turtle3=" + turtle3 +
                 ", turtle4=" + turtle4 +
                 ", turtle5=" + turtle5 +
-                '}';
+                '}' + "\n";
+    }
+
+    @Override
+    public int compareTo(Stone o) {
+        return 0;
     }
 }
