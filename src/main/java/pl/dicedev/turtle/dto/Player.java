@@ -20,10 +20,14 @@ public class Player {
         this.cards = cards;
     }
 
+    public String getName() {
+        return name;
+    }
+
     @Override
     public String toString() {
         return "Player{" +
-                "name='" + name +
+                "name = " + name +
                 ", \n cards=" + cards +
                 '}';
     }

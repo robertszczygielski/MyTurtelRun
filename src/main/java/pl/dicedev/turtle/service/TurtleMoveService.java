@@ -53,7 +53,12 @@ public class TurtleMoveService {
             }
             turtleChain.moveTurtle(stone);
         }
-        Stone nextStone = stoneList.get(indexOfTurtle + card.getCardValue().getValue());
+
+        Stone nextStone = stoneList.get(
+                indexOfTurtle + card.getCardValue().getValue() < 10
+                        ? indexOfTurtle + card.getCardValue().getValue()
+                        : 9
+                );
 
         nextStone.setTurtle1(turtle);
 
